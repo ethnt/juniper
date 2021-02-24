@@ -4,7 +4,7 @@ require:
 
 AllCops:
   NewCops: enable
-  TargetRubyVersion: 3.0
+  TargetRubyVersion: 2.7
 
 Style/StringLiteralsInInterpolation:
   Enabled: true
@@ -12,3 +12,6 @@ Style/StringLiteralsInInterpolation:
 
 Layout/LineLength:
   Max: 120
+
+Style/AccessorGrouping:
+  Enabled: false

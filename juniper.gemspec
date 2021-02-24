@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description   = spec.summary
   spec.homepage      = 'https://github.com/ethnt/juniper'
   spec.license       = 'MIT'
-  spec.required_ruby_version = Gem::Requirement.new('>= 3.0')
+  spec.required_ruby_version = Gem::Requirement.new('>= 2.7.0')
 
   spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
 
@@ -34,4 +34,8 @@ Gem::Specification.new do |spec|
 
   # For more information and examples about making a new gem, checkout our
   # guide at: https://bundler.io/guides/creating_gem.html
+
+  spec.add_dependency 'http_router', '~> 0.11.2'
+  spec.add_dependency 'rack', '~> 2.2.3'
+  spec.add_dependency 'sorbet-runtime', '~> 0.5.6277'
 end

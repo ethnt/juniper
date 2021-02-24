@@ -2,15 +2,27 @@ PATH
   remote: .
   specs:
     juniper (0.1.0)
+      http_router (~> 0.11.2)
+      rack (~> 2.2.3)
+      sorbet-runtime (~> 0.5.6277)
 
 GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.2)
+    coderay (1.1.3)
     diff-lcs (1.4.4)
+    http_router (0.11.2)
+      rack (>= 1.0.0)
+      url_mount (~> 0.2.1)
+    method_source (1.0.0)
     parallel (1.20.1)
     parser (3.0.0.0)
       ast (~> 2.4.1)
+    pry (0.13.1)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+    rack (2.2.3)
     rainbow (3.0.0)
     rake (13.0.3)
     regexp_parser (2.0.3)
@@ -47,20 +59,31 @@ GEM
     ruby-progressbar (1.11.0)
     sorbet (0.5.6189)
       sorbet-static (= 0.5.6189)
+    sorbet-runtime (0.5.6277)
     sorbet-static (0.5.6189-universal-darwin-20)
     unicode-display_width (2.0.0)
+    url_mount (0.2.1)
+      rack
+    yard (0.9.26)
+    yard-sorbet (0.2.0)
+      sorbet-runtime (>= 0.5.5845)
+      yard (>= 0.9.16)
 
 PLATFORMS
+  ruby
   x86_64-darwin-20
 
 DEPENDENCIES
   juniper!
+  pry
   rake (~> 13.0)
   rspec (~> 3.0)
   rubocop
   rubocop-rake
   rubocop-rspec
   sorbet
+  yard
+  yard-sorbet
 
 BUNDLED WITH
    2.2.3

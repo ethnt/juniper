@@ -1,0 +1,16 @@
+Juniper.server
+  -> Juniper::Server.new (see Hanami::App)
+    -> new rack app with configuration
+      -> Juniper::Configuration
+        -> mount subclass of Juniper::Application, to: '/'
+          -> Juniper::Application
+            -> #routes(routes :: Juniper::Router)
+              -> Juniper::Router
+                - subclass of HttpRouter
+            -> #call(env) calls to router
+      -> new router
+      -> new rack builder
+      -> mount each app in configuration to router (see Hanami::Configuration, Hanami::Configuration::App)
+      -> builder.run(routes)
+      -> builder.to_app
+      -> #call
